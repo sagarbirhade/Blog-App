@@ -5,5 +5,6 @@ data class BlogItemModel(
     val userName : String,
     val date : String,
     val post : String,
-    val likeCount : Int
+    val likeCount : Int,
+    val imageUrl : String
 )

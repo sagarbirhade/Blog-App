@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Blog App</string>
+    <string name="back_button_description">Go back to previous screen</string>
+    <string name="save_article_button_description">Save this article</string>
+    <string name="profile_picture_description">User profile picture</string>
+    <string name="add_article_button_description">Add a new article</string>
 </resources>

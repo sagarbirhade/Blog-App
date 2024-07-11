@@ -34,6 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        android:importantForAccessibility="no"
         app:srcCompat="@drawable/background" />
 
     <androidx.cardview.widget.CardView
@@ -51,19 +52,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/profile1" />
+            android:contentDescription="@string/profile_picture_description"
+            android:src="@drawable/profile1" />
     </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/save_article_button"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="40dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toStartOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/cardView"
-        app:srcCompat="@drawable/save_article" />
+        android:contentDescription="@string/save_article_button_description"
+        android:src="@drawable/save_article" />
 
     <SearchView
         android:id="@+id/search_block"
@@ -88,4 +91,19 @@
         app:layout_constraintStart_toStartOf="@+id/search_block"
         app:layout_constraintTop_toBottomOf="@+id/search_block"
         tools:listitem="@layout/blog_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/articleButtonFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="76dp"
+        android:clickable="true"
+        app:shapeAppearanceOverlay="@style/name"
+        app:tint = "@color/white"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/add_article_button_description"
+        app:srcCompat="@drawable/add_newarticle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
